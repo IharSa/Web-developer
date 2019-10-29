@@ -9,26 +9,82 @@ a {
 
 li {
     list-style: none;
-
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;/*прикрепление шрифта ко всему контенту*/
 } 
 
 header {
     width: 100%;
     background: #000000;
-    display: flex;   
+    display: flex;/*делаем Шапку Флексовой*/   
 }
 
-.header-logo {
+.header-logo { /*позиционированние лого*/
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 800;
     font-size: 24px;
     margin-top: 56px;
-    margin-left: 12%;
-    
-
+    margin-left: 12%;  
 }
+
+nav {
+    margin-top: 56px;
+    margin-left: 29px;
+} 
+
+.top-nav a {
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.top-nav a:hover {
+   border-bottom: 3px solid #fcac45;  
+}
+
+.top-nav .icon {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1010px) {
+    .top-nav a {
+        display: none;   
+    }
+    .top-nav a.icon {
+        float: right;
+        margin-top: -17px;
+        display: block;
+        color: #ffffff;
+        font-size: 25px;
+    }
+    nav {
+        width: 100%; 
+    }
+    
+    .top-nav .responsive{
+        position: relative
+        top: 50px;
+        left: -200px;
+    }
+    header .top-nav .responsive{ /*высота при нажатии кнопки меню*/
+        height: 340px;
+    }
+    .top-nav .responsive a.icon{
+        position: absolute;
+        top: -50px;
+        left: -200px;
+    } 
+    .top-nav .responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
