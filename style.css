@@ -2,23 +2,25 @@
     margin: 0;
     padding: 0;
 }
-
 a {
-    text-decoration: none;   
+    text-decoration: none;/*Подчёркивание под текстом, остовляем по умолчанию*/   
 }
-
 li {
-    list-style: none;
+    list-style: none;/*Скрываем маркеры*/
 }
-
+li:not(:first-child){
+    margin-left: 30px;
+}
 body {
+    display: flex;
+    flex-direction: column; 
     font-family: 'Open Sans', sans-serif;/*прикрепление шрифта ко всему контенту*/
+    width: 100%;
 } 
-
 header {
     width: 100%;
     background: #000000;
-    display: flex;/*делаем Шапку Флексовой*/   
+    /*делаем Шапку Флексовой*/   
 }
 
 .header-logo { /*позиционированние лого*/
@@ -26,13 +28,12 @@ header {
     color: #ffffff;
     font-weight: 800;
     font-size: 24px;
-    margin-top: 56px;
+    margin-top: 55px;
     margin-left: 12%;  
 }
 
 nav {
-    margin-top: 56px;
-    margin-left: 29px;
+   
 } 
 
 .top-nav a {
@@ -53,7 +54,7 @@ nav {
 
 
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1039px) {
     .top-nav a {
         display: none;   
     }
@@ -70,7 +71,7 @@ nav {
     
     .top-nav .responsive{
         position: relative
-        top: 50px;
+        top : 50px;
         left: -200px;
     }
     header .top-nav .responsive{ /*высота при нажатии кнопки меню*/
@@ -88,3 +89,49 @@ nav {
     }
 }
 
+/*Внесение изменений flexbox*/
+.content{
+    width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.section{
+    height: 600px;
+    width: 100%;
+    background-color: #ffffff;
+}
+.text{
+    height: 100vh;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    font-weight: bold;/*Шрифт самый жирный*/
+    
+    text-transform: uppercase;/*Все буквы в верхнем регистре*/
+}
+.section1{
+    background-color: #333333;
+    height: 600px;
+    
+
+}
+.section2{
+    background-color: red;
+    height: 720px;
+    
+}
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.top-nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
